@@ -1,0 +1,23 @@
+auto lo
+iface lo inet loopback
+
+auto eth0 
+iface eth0 inet static
+address 112.108.40.74
+netmask 255.255.255.0
+network 112.108.40.0
+gateway 112.108.40.1
+broadcast 8.8.8.8
+
+#auto wlan0
+#iface wlan0 inet static
+#address 192.168.0.100
+#netmask 255.255.255.0
+#gateway 192.168.0.1
+
+#auto br0
+#iface br0 inet static
+#bridge_ports eth0 wlan0
+#address 192.168.0.120
+#gateway 192.168.0.1
+#netmask 255.255.255.0

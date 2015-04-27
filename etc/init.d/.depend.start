@@ -1,0 +1,20 @@
+TARGETS = rsyslog triggerhappy ifplugd hostapd xrdp bootlogs motd killprocs sudo dbus mysql isc-dhcp-server single dphys-swapfile rsync cron ssh ntp avahi-daemon bluetooth lightdm cups saned samba plymouth rc.local rmnologin
+INTERACTIVE =
+dbus: rsyslog
+mysql: rsyslog
+isc-dhcp-server: rsyslog
+single: killprocs bootlogs motd
+dphys-swapfile: rsyslog
+rsync: rsyslog
+cron: rsyslog
+ssh: rsyslog
+ntp: rsyslog
+avahi-daemon: dbus rsyslog
+bluetooth: rsyslog dbus
+lightdm: dbus
+cups: rsyslog avahi-daemon
+saned: rsyslog dbus avahi-daemon
+samba: cups
+plymouth: avahi-daemon dbus rsyslog triggerhappy mysql ifplugd samba cups hostapd bluetooth lightdm isc-dhcp-server xrdp saned bootlogs motd dphys-swapfile rsync cron sudo ssh ntp
+rc.local: avahi-daemon dbus rsyslog triggerhappy mysql ifplugd samba cups hostapd bluetooth lightdm isc-dhcp-server xrdp saned bootlogs motd dphys-swapfile rsync cron sudo ssh ntp
+rmnologin: sudo avahi-daemon dbus rsyslog triggerhappy mysql ifplugd samba cups hostapd bluetooth lightdm isc-dhcp-server xrdp saned bootlogs motd dphys-swapfile rsync cron ssh ntp

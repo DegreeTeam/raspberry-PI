@@ -1,0 +1,11 @@
+TARGETS = triggerhappy ifplugd fake-hwclock hostapd xrdp mysql isc-dhcp-server bluetooth lightdm saned samba plymouth urandom alsa-utils etc-setserial setserial avahi-daemon cups sendsigs rsyslog umountnfs.sh rpcbind nfs-common hwclock.sh networking umountfs umountroot halt reboot
+avahi-daemon: saned
+cups: samba
+sendsigs: avahi-daemon triggerhappy mysql ifplugd samba hostapd bluetooth alsa-utils lightdm plymouth isc-dhcp-server xrdp etc-setserial setserial saned
+rsyslog: avahi-daemon mysql sendsigs bluetooth isc-dhcp-server saned cups
+umountnfs.sh: avahi-daemon triggerhappy mysql ifplugd samba hostapd rsyslog bluetooth alsa-utils lightdm plymouth isc-dhcp-server xrdp sendsigs etc-setserial setserial saned
+networking: mysql rpcbind umountnfs.sh ifplugd samba isc-dhcp-server xrdp
+umountfs: avahi-daemon triggerhappy mysql rpcbind urandom umountnfs.sh ifplugd hwclock.sh samba hostapd bluetooth alsa-utils lightdm plymouth isc-dhcp-server xrdp networking etc-setserial setserial saned
+umountroot: umountfs fake-hwclock
+halt: umountroot
+reboot: umountroot

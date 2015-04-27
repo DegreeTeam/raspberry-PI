@@ -1,0 +1,43 @@
+interface=wlan0
+driver=rtl871xdrv
+bridge=br0
+ssid=RPiAP
+channel=6
+wmm_enabled=0
+wpa=1
+hw_mode=g
+wpa_passphrase=password
+
+## Key management algorithms ##
+wpa_key_mgmt=WPA-PSK
+## Set cipher suites (encryption algorithms) ##
+## TKIP = Temporal Key Integrity Protocol
+## CCMP = AES in Counter mode with CBC-MAC
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+## Shared Key Authentication ##
+auth_algs=1
+## Accept all MAC address ###
+macaddr_acl=0
+[출처] 라즈베리파이를 무선 AP로 사용하기  (오픈소스 소프트웨어 & 하드웨어: 로봇 기술 공유 카페 (오로카)) |작성자 팬더골드interface=wlan0
+driver=rtl871xdrv
+bridge=br0
+ssid=RPiAP
+channel=6
+wmm_enabled=0
+wpa=1
+hw_mode=g
+wpa_passphrase=password
+
+## Key management algorithms ##
+wpa_key_mgmt=WPA-PSK
+## Set cipher suites (encryption algorithms) ##
+## TKIP = Temporal Key Integrity Protocol
+## CCMP = AES in Counter mode with CBC-MAC
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+## Shared Key Authentication ##
+auth_algs=1
+## Accept all MAC address ###
+macaddr_acl=0
+[출처] 라즈베리파이를 무선 AP로 사용하기  (오픈소스 소프트웨어 & 하드웨어: 로봇 기술 공유 카페 (오로카)) |작성자 팬더골드

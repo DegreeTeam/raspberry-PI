@@ -1,0 +1,7 @@
+#!/bin/sh
+        #
+        # cron script to save a update local database.
+        #
+        # Written by Steven Hickson <help@stevenhickson.com> for the playvideo project.
+        #
+		updatedb --localpaths=/media/External/movies --output=/home/pi/.media.db

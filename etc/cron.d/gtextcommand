@@ -1,0 +1,11 @@
+#!/bin/sh
+    #
+    # cron script to check google voice.
+    #
+    # Written by Steven Hickson <help@stevenhickson.com> for the gtextcommand script.
+    #
+    DISPLAY=:0
+
+    * * * * * pi gtextcommand
+
+    

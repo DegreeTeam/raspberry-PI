@@ -1,0 +1,86 @@
+###############################################################################
+#
+#  MIME types and programs that process those types
+#
+#  Much of this file is generated automatically by the program "update-mime".
+#  Please see the "update-mime" man page for more information.
+#
+#  Users can add their own rules if they wish by creating a ".mailcap"
+#  file in their home directory.  Entries included there will take
+#  precedence over those listed here.
+#
+###############################################################################
+
+
+###############################################################################
+#
+#  User section follows:  Any entries included in this section will take
+#  precedence over those created by "update-mime".  DO NOT CHANGE the
+#  "User Section Begins" and "User Section Ends" lines, or anything outside
+#  of this section!
+#
+
+# ----- User Section Begins ----- #
+# -----  User Section Ends  ----- #
+
+###############################################################################
+
+text/plain; less '%s'; needsterminal
+text/html; /usr/bin/sensible-browser '%s'; description=HTML Text; nametemplate=%s.html
+application/pdf; /usr/bin/xpdf '%s'; test=test "$DISPLAY" != ""; description=Portable Document Format; nametemplate=%s.pdf
+application/x-pdf; /usr/bin/xpdf '%s'; test=test "$DISPLAY" != ""; description=Portable Document Format; nametemplate=%s.pdf
+application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
+audio/mpeg; mpg123 -q '%s'; needsterminal
+application/x-ogg; /usr/bin/mplayer '%s'; description="OggVorbis Audio"
+application/ogg; /usr/bin/mplayer '%s'; description="OggVorbis Audio"
+audio/mpeg; /usr/bin/mplayer '%s'; description="MPEG Audio Format"
+audio/x-mpegurl; /usr/bin/mplayer '%s'; description="Icecast Playlists"
+audio/x-ms-wax; /usr/bin/mplayer '%s'; description="Audio Format"
+audio/x-ms-wma; /usr/bin/mplayer '%s'; description="Audio Format"
+audio/x-pls; /usr/bin/mplayer '%s'; description="MP3 ShoutCast/IceCast Playlist"
+audio/x-scpls; /usr/bin/mplayer '%s'; description="Shoutcast Playlists"
+audio/x-wav; /usr/bin/mplayer '%s'; description="Waveform Microsoft Wave/RIFF"
+video/mpeg; /usr/bin/mplayer '%s'; description="MPEG Video Format"; test=test -n "$DISPLAY"
+video/quicktime; /usr/bin/mplayer '%s'; description="Apple Quicktime Video"; test=test -n "$DISPLAY"
+video/x-mpeg2; /usr/bin/mplayer '%s'; description="MPEG Video"; test=test -n "$DISPLAY"
+video/x-mpeg; /usr/bin/mplayer '%s'; description="MPEG 2 Video"; test=test -n "$DISPLAY"
+video/mpeg; /usr/bin/mplayer '%s'; description="MPEG 2 Video"; test=test -n "$DISPLAY"
+video/x-ms-afs; /usr/bin/mplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+video/x-ms-asf; /usr/bin/mplayer '%s'; description="MS ASF video"; test=test -n "$DISPLAY"
+video/x-msvideo; /usr/bin/mplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+video/x-ms-wma; /usr/bin/mplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+video/x-ms-wmv; /usr/bin/mplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+video/x-ms-wmx; /usr/bin/mplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+video/x-ms-wvx; /usr/bin/mplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+audio/basic; /usr/bin/play -t au '%s'
+audio/x-aiff; /usr/bin/play -t aiff '%s'
+audio/x-gsm; /usr/bin/play -t gsm '%s'
+audio/x-wav; /usr/bin/play -t wav '%s'
+application/x-image;	squeak '%s'; nametemplate=%s.image; test=test "$DISPLAY" != ""
+application/squeak-image;	squeak '%s'; nametemplate=%s.image; test=test "$DISPLAY" != ""
+application/squeak-project;	squeak '%s'; nametemplate=%s.pr; test=test "$DISPLAY" != ""
+application/x-tar; /bin/tar tvf -; print=/bin/tar tvf - | print text/plain:-; copiousoutput
+application/x-gtar; /bin/tar tvzf -; print=/bin/tar tvzf - | print text/plain:-; copiousoutput
+application/zip; unzip -l '%s'; nametemplate=%s.zip; copiousoutput
+text/plain; more '%s'; needsterminal
+application/x-rar; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="RAR Archive"; test=test -n "$DISPLAY" && test -e /usr/bin/unrar
+application/rar; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="RAR Archive"; test=test -n "$DISPLAY" && test -e /usr/bin/unrar
+application/x-arj; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="ARJ Archive"; test=test -n "$DISPLAY" && test -e /usr/bin/arj
+application/arj; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="ARJ Archive"; test=test -n "$DISPLAY" && test -e /usr/bin/arj
+application/x-zip; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="ZIP Archive"; test=test -n "$DISPLAY" && test -e /usr/bin/unzip
+application/zip; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="ZIP Archive"; test=test -n "$DISPLAY" && test -e /usr/bin/unzip
+application/x-redhat-package-manager; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="RPM Archive"; test=test -n "$DISPLAY" && test -f /usr/bin/rpm
+application/x-tar; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="TAR Archive"; test=test -n "$DISPLAY"
+application/x-gtar; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="TAR Archive"; test=test -n "$DISPLAY"
+application/x-ustar; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="TAR Archive"; test=test -n "$DISPLAY"
+application/x-gzip; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="GZ compressed file"; test=test -n "$DISPLAY"
+application/x-bzip2; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="BZIP2 compressed file"; test=test -n "$DISPLAY"
+application/x-lzma; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="LZMA compressed file"; test=test -n "$DISPLAY"
+text/plain; view '%s'; edit=vim '%s'; compose=vim '%s'; test=test -x /usr/bin/vim; needsterminal
+text/plain; view '%s'; edit=vi '%s'; compose=vi '%s'; needsterminal
+text/html; /usr/bin/html2text '%s'; copiousoutput; description=HTML Text
+text/*; less '%s'; needsterminal
+text/*; view '%s'; edit=vim '%s'; compose=vim '%s'; test=test -x /usr/bin/vim; needsterminal
+text/*; more '%s'; needsterminal
+text/*; view '%s'; edit=vi '%s'; compose=vi '%s'; needsterminal
+application/x-debian-package; /usr/lib/mime/debian-view '%s'; needsterminal; description=Debian GNU/Linux Package; nametemplate=%s.deb

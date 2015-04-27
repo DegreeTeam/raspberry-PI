@@ -1,0 +1,17 @@
+auto lo
+iface lo inet loopback
+address 127.0.0.1
+netmask 255.0.0.0
+
+auto eth0
+auto wlan0
+auto br0
+
+iface eth0 inet dhcp
+
+iface br0 inet static
+address 112.108.40.74
+netmask 255.255.255.0
+bridge_ports wlan0 eth1
+
+
